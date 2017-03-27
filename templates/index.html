@@ -82,8 +82,11 @@ function ridersview(){
 
 function HidenShow(section_id){
 console.log(section_id);
-$("#pagecontent").children().switchClass( "show", "hide", 1, "easeInOutQuad" );
-$("#pagecontent").children('#'+section_id).switchClass( "hide", "show", 1, "easeInOutQuad");
+$("#"+section_id).removeClass("hide");
+$("#"+section_id).addClass("show");
+//$("#pagecontent").children().removeClass("show");
+//$("#pagecontent").children().addClass("hide");
+
 triggerChange(section_id);
 }
 
@@ -701,7 +704,7 @@ else if(section_id=="driversview"){ driversview();   }
 <!-- AdminLTE App -->
 <script src="/static/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/static/dist/js/pages/dashboard.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="/static/dist/js/demo.js"></script>
 
